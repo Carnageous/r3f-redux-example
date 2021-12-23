@@ -22,10 +22,10 @@ export default function KeyframeEditor(): JSX.Element {
 
   return (
     <div className="keyframe-editor">
-      <div className="parts-list">
+      <ul className="parts-list">
         {Object.values(parts).map((part) => {
           return (
-            <div
+            <li
               className={classNames("part", {
                 "part--active": activePart === part.id,
                 "part--hover": hoveringPart === part.id,
@@ -35,11 +35,11 @@ export default function KeyframeEditor(): JSX.Element {
               onMouseLeave={() => setHoveringPart(null)}
               key={part.id}
             >
-              <li>{part.name}</li>
-            </div>
+              {part.name}
+            </li>
           );
         })}
-      </div>
+      </ul>
     </div>
   );
 }
