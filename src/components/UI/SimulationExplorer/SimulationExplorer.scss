@@ -1,0 +1,26 @@
+@use "@dive/penguin/dist/scss/variables";
+
+.simulation-explorer {
+  padding: 16px;
+  background-color: variables.$white;
+  border-left: 1px solid variables.$grey-3;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: stretch;
+
+  .add {
+    display: flex;
+    align-items: flex-start;
+
+    .dive-input {
+      width: 100%;
+    }
+
+    .dive-button {
+      display: block;
+      margin: 20px 0 0 0;
+      height: 34px;
+    }
+  }
+}

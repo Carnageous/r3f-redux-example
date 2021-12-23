@@ -1,0 +1,27 @@
+@use "@dive/penguin/dist/scss/variables";
+
+.parts-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .part {
+    padding: 0 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .dive-button {
+      margin: 0 8px;
+    }
+
+    &--active {
+      color: variables.$primary;
+    }
+
+    &--hover {
+      background-color: variables.$primary-light;
+    }
+  }
+}

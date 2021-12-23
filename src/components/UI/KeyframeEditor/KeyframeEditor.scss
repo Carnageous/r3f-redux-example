@@ -1,0 +1,27 @@
+@use "@dive/penguin/dist/scss/variables";
+
+.keyframe-editor {
+  background-color: variables.$grey-1;
+  border-top: 1px solid variables.$grey-3;
+  height: 100%;
+  overflow-y: auto;
+
+  .parts-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .part {
+      padding: 8px;
+      cursor: pointer;
+
+      &--active {
+        color: variables.$primary;
+      }
+
+      &--hover {
+        background-color: variables.$primary-light;
+      }
+    }
+  }
+}

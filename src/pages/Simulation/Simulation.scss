@@ -1,0 +1,21 @@
+@use "@dive/penguin/dist/scss/variables";
+
+.simulation {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  grid-template-rows: 5fr 1fr;
+  grid-template-areas: "sim explorer" "editor explorer";
+  height: 100%;
+
+  :nth-child(1) {
+    grid-area: sim;
+  }
+
+  :nth-child(2) {
+    grid-area: explorer;
+  }
+
+  :nth-child(3) {
+    grid-area: editor;
+  }
+}

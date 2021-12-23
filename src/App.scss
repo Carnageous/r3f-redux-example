@@ -1,0 +1,45 @@
+@use "@dive/penguin/dist/scss/variables";
+@use "@dive/penguin/dist/scss/mixins";
+
+$header-height: 60px;
+
+.app {
+  padding-top: $header-height;
+
+  &__header {
+    background-color: variables.$black;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: $header-height;
+    z-index: 100;
+
+    @include mixins.box-shadow(2);
+
+    &__link {
+      color: variables.$white;
+      margin: 0 8px;
+
+      &--active {
+        color: variables.$primary;
+      }
+    }
+  }
+
+  &__title {
+    color: variables.$white;
+    margin: 0;
+
+    code {
+      color: variables.$primary;
+    }
+  }
+
+  &__content {
+    height: calc(100vh - $header-height);
+    width: 100vw;
+    position: relative;
+  }
+}
