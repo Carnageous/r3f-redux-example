@@ -7,6 +7,7 @@ import { setActive, setHover } from "store/parts";
 import Box from "../Box/Box";
 
 import "./View.scss";
+import Pointcloud from "../Pointcloud/Pointcloud";
 
 export default function View(): JSX.Element {
   const parts = useAppSelector((state) => state.parts.parts);
@@ -42,7 +43,9 @@ export default function View(): JSX.Element {
       <Canvas>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
-        {boxes}
+
+        <Pointcloud />
+
         <OrbitControls makeDefault />
         <GizmoHelper
           alignment="bottom-right" // widget alignment within scene
