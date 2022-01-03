@@ -55,7 +55,7 @@ export default function View(): JSX.Element {
         {/* Random stuff */}
         <Stats showPanel={0} className="stats" />
         <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.25} />
-        {/* <Cloud opacity={0.7} speed={0.4} width={10} depth={1.5} segments={20} /> */}
+        <Cloud opacity={0.7} speed={0.4} width={10} depth={1.5} segments={20} position={[1, 0, 0]} />
       </Canvas>
     </Suspense>
   );
