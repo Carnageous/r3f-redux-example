@@ -1,5 +1,11 @@
+@use "@dive/penguin/dist/scss/variables";
+
 .stats {
   position: absolute !important;
   top: 80px !important;
   left: 16px !important;
+}
+
+.view {
+  background-color: variables.$pure-black;
 }
