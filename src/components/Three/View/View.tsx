@@ -15,27 +15,19 @@ export default function View(): JSX.Element {
 
   const dispatch = useAppDispatch();
 
-  const setActivePart = (partId: string | null) => {
-    dispatch(setActive(partId));
-  };
-
-  const setHoveringPart = (partId: string | null) => {
-    dispatch(setHover(partId));
-  };
-
   const boxes = useMemo(() => {
     return Object.values(parts).map((part, idx) => (
       <Box
         position={[idx * 2, 0, 0]}
         key={part.id}
-        onPointerOver={() => setHoveringPart(part.id)}
-        onPointerOut={() => setHoveringPart(null)}
-        onClick={() => setActivePart(activePart === part.id ? null : part.id)}
+        onPointerOver={() => dispatch(setHover(part.id))}
+        onPointerOut={() => dispatch(setHover(null))}
+        onClick={() => dispatch(setActive(activePart === part.id ? null : part.id))}
         active={activePart === part.id}
         hovering={hoveringPart === part.id}
       />
     ));
-  }, [parts, activePart, hoveringPart]);
+  }, [parts, activePart, hoveringPart, dispatch]);
 
   return (
     <Suspense fallback={<div>Loading...</div>}>

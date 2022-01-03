@@ -1,0 +1,72 @@
+@use "@dive/penguin/dist/scss/variables";
+@use "@dive/penguin/dist/scss/mixins";
+
+@use "variables.scss" as appVars;
+
+.header {
+  background-color: variables.$black;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: appVars.$header-height;
+  z-index: 100;
+
+  @include mixins.box-shadow(2);
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: variables.$white;
+    margin: 0 8px;
+
+    &--active {
+      color: variables.$primary;
+    }
+  }
+
+  &__title {
+    color: variables.$white;
+    margin: 0 16px 0 0;
+
+    code {
+      color: variables.$primary;
+    }
+  }
+
+  &__auth {
+    color: variables.$white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__user {
+    margin: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__userdata {
+    display: flex;
+    flex-flow: column;
+    margin-left: 8px;
+
+    b {
+      color: variables.$white;
+    }
+
+    span {
+      color: variables.$grey-3;
+    }
+  }
+
+  &__picture {
+    height: calc(appVars.$header-height - 20px);
+  }
+}
