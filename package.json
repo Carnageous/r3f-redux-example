@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.8.0",
-    "@dive/penguin": "^0.1.20",
+    "@dive/penguin": "^0.1.21",
     "@react-three/drei": "^8.3.1",
     "@react-three/fiber": "^7.0.24",
     "@reduxjs/toolkit": "^1.7.1",
